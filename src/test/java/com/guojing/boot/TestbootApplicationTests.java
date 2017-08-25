@@ -1,7 +1,7 @@
 package com.guojing.boot;
 
 import com.guojing.boot.entity.TbMember;
-import com.guojing.boot.interf.UserRepository;
+import com.guojing.boot.interf.MemberRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 public class TestbootApplicationTests {
 
 	@Resource
-	UserRepository userRepository;
+    MemberRepository userRepository;
 
 	@Test
 	public  void getByName(){
