@@ -61,6 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //设置拦截规则
                 .antMatchers("/")
                 .permitAll()
+//                .antMatchers("/index/**").hasIpAddress("192.168.52.188")
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -70,10 +71,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 //默认登录成功跳转页面
                 .defaultSuccessUrl("/chat")
+//                .failureUrl("/login?error")
                 .permitAll()
+//                .and()
+//                .rememberMe()
+//                .tokenValiditySeconds(60 * 60 * 24 * 7)
                 .and()
                 //设置注销
                 .logout()
+//                .logoutUrl("/custom-logout")
                 .permitAll();
     }
 
