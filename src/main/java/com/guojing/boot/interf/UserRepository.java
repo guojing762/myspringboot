@@ -1,4 +1,4 @@
-package com.guojing.boot.inte;
+package com.guojing.boot.interf;
 
 import com.guojing.boot.entity.TbMember;
 import org.springframework.data.jpa.repository.JpaRepository;

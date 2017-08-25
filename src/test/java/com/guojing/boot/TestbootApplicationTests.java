@@ -1,7 +1,7 @@
 package com.guojing.boot;
 
 import com.guojing.boot.entity.TbMember;
-import com.guojing.boot.inte.UserRepository;
+import com.guojing.boot.interf.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

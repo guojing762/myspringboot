@@ -1,15 +1,10 @@
 package com.guojing.boot.controller;
 
 import com.guojing.boot.entity.Person;
-import com.guojing.boot.entity.TbMember;
-import com.guojing.boot.inte.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
