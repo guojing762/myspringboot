@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface UserRepository extends JpaRepository<TbUser, Long> {
+public interface TbUserRepository extends JpaRepository<TbUser, Long> {
 
     TbUser findByLoginName(String loginName);
 

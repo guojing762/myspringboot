@@ -2,10 +2,12 @@ package com.guojing.boot.service;
 
 import com.guojing.boot.entity.TbUser;
 import com.guojing.boot.entity.TbUserRole;
-import com.guojing.boot.interf.UserRepository;
+import com.guojing.boot.interf.TbUserRepository;
 import com.guojing.boot.interf.UserRoleRepository;
 import com.guojing.boot.util.SpringContextUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,8 +24,16 @@ import java.util.*;
 @Service
 @Transactional
 public class SecurityService {
+
 	@Autowired
-	UserRepository userRepository;
+	@Qualifier("primaryJdbcTemplate")
+	protected JdbcTemplate jdbcTemplate1;
+	@Autowired
+	@Qualifier("secondaryJdbcTemplate")
+	protected JdbcTemplate jdbcTemplate2;
+
+	@Autowired
+	TbUserRepository userRepository;
 	@Autowired
 	UserRoleRepository userRoleRepository;
 
